@@ -8,7 +8,7 @@ mongoose.connect(process.env.DB);
 const cors = require('cors');
 
 const corsOptions ={
-  origin:['http://localhost:3000' , 'https://krushna-internship-task.web.app/' ], 
+  origin:['http://localhost:3000' , 'https://krushna-internship-task.web.app' ], 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
