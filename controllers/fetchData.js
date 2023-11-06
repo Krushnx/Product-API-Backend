@@ -19,7 +19,7 @@ const fetchFunc = async (req, res) => {
           category: transaction.category,
           image: transaction.image,
           sold: transaction.sold,
-          dateOfSale: new Date(transaction.dateOfSale),
+          dateOfSale: transaction.dateOfSale,
         });
         await newTransaction.save();
       }

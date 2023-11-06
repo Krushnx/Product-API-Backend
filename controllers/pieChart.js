@@ -2,6 +2,8 @@ const ProductTransaction = require('../models/productSchema')
 
 async function fetchPieChart(selectedMonth) {
     try {
+      console.log("-----------------" , selectedMonth);
+      
       // Calculate the count of items in each category for the selected month
       const pipeline = [
         {
@@ -19,7 +21,7 @@ async function fetchPieChart(selectedMonth) {
         },
       ];
   
-      console.log('Aggregation Pipeline:', pipeline); // Add this line to print the pipeline
+      // console.log('Aggregation Pipeline:', pipeline); // Add this line to print the pipeline
   
       const results = await ProductTransaction.aggregate(pipeline);
   
@@ -33,7 +35,7 @@ async function fetchPieChart(selectedMonth) {
       });
   
       console.log('Final Pie Chart Data:', pieChartData); // Add this line to print the final pie chart data
-  
+      console.log("-------------------");
       return pieChartData;
     } catch (error) {
       console.error('Error generating pie chart data:', error);
