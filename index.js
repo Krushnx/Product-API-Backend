@@ -13,7 +13,7 @@ const corsOptions ={
   optionSuccessStatus:200
 }
 app.use(cors(corsOptions));//set up route
-
+//route added
 const db = mongoose.connection;
 
 db.on('error', (error) => {
